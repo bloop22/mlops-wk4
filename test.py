@@ -27,7 +27,7 @@ class TestModel(unittest.TestCase):
         #pass through base model to get specific abstract features representation
         self.base_model = applications.VGG16(include_top=False, input_shape=(224, 224, 3))
         # Choose a layer that outputs (4, 4, 512)
-        layer_name = block5_pool  # last maxpooling layer in VGG16
+        layer_name = "block5_pool"  # last maxpooling layer in VGG16
         outputlayer = Model(inputs=self.base_model.input, outputs=self.base_model.get_layer(layer_name).output)
         converted_img = outputlayer.predict(sample)
         converted_img = converted_img[0]
