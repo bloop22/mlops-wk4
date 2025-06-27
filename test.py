@@ -1,4 +1,5 @@
 import unittest
+import os
 
 class TestModel(unittest.TestCase):
     restored_model = None
@@ -33,6 +34,7 @@ class TestModel(unittest.TestCase):
         resized_sample =resize(converted_img, size=(4, 4))
         #get batch dimension representation
         resized=np.expand_dims(resized_sample, axis=0)
+
         return resized
 
 
