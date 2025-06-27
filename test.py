@@ -38,6 +38,7 @@ class TestModel(unittest.TestCase):
 
     def test_sample1(self):
         sample1=self.samples_path+"/sample1.jpg"
+        print(sample1)
         resized=self.convert_img(sample1)
         result=self.restored_model.predict(resized)
         if result[0][0] >= 0.5:
