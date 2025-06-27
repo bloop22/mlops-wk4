@@ -4,7 +4,7 @@ class TestModel(unittest.TestCase):
     restored_model = None
     base_model = None
     top_model_complete = 'model.keras'
-    samples_path = samples
+    samples_path = "samples"
 
     def setUp(self):
         from tensorflow.keras.models import load_model
@@ -44,7 +44,7 @@ class TestModel(unittest.TestCase):
             prediction = 'dog'
         else:
             prediction = 'cat'
-        self.assertEqual(prediction,dog,Predicted class is wrong)
+        self.assertEqual(prediction,"dog","Predicted class is wrong")
 
 if __name__ == '__main__':
     unittest.main()
